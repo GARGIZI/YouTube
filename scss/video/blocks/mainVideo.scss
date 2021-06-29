@@ -1,0 +1,428 @@
+.mainVideo {
+  margin: 94px 70px 20px 63px ; 
+
+  &-inner {
+    display: flex; 
+  }
+
+  &-video {
+    max-width: 1363px ;
+
+    &__nameVideo {
+      margin-top: 20px;
+
+      font-weight: $fw-sev;
+      font-size: 36px;
+      line-height: 45.18px;
+      color: $colorBlack ; 
+    }
+
+    &__opportunities {
+      display: flex ;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 14px;
+
+      button:not(.mainVideo-video__more) {
+        border-radius: 20px ;
+        position: relative;
+
+        font-size: 16px;
+        line-height: $lineHeight;
+        color: $colorBlack;
+        background: none;
+        z-index: 5 ; 
+
+        width: 100px ;
+        height: 40px ;
+        transition: $trans ; 
+
+        &:not(.mainVideo-video__more):hover {
+          box-shadow: 0px 0px 5px 3px rgba(13, 14, 15, 0.23);
+          transition: $trans ; 
+        }
+
+        &:not(.mainVideo-video__more):focus {
+          box-shadow: 0px 0px 10px 3px rgba(22, 212, 86, 0.6);
+        }
+
+        &:not(.mainVideo-video__more):not(:first-child) {
+          margin-left: 10px;
+        }
+      }
+    }
+
+    &__views {
+      font-size: 20px;
+      line-height: 25.1px;
+      color: $colorGray ; 
+    }
+
+    &__more {
+      margin-left: 40px;
+      background: none;
+    }
+
+    &__info {
+      position: relative ;
+
+      &::after {
+        content: '';
+        display: block ;
+        width: 100% ;
+        height: 1px ;
+        background: rgba(216, 216, 216, 0.5);
+        position: absolute ; 
+        bottom: -15px ; 
+        left: 0 ; 
+      }
+    }
+
+    &__description {
+      display: flex;
+      justify-content: space-between;
+
+      margin-top: 59px;
+    }
+
+    &__block {
+      max-width: 912px ;
+    }
+
+    &__title {
+      display: flex;
+      align-items: center;
+    }
+
+    &__nameUser {
+      font-weight: $fw-sev;
+      font-size: 26px;
+      line-height: 32.63px;
+      color: $colorBlack;
+
+      margin-left: 12px;
+
+      span {
+        display: block;
+
+        font-size: 13px;
+        line-height: 16.32px;
+        color: $colorGray;
+
+        margin-top: 4px;
+      }
+    }
+
+    &__descriptionText {
+      margin-left: 92px;
+      margin-bottom: 15px;
+
+      max-height: 88px ;
+      overflow: hidden;
+
+      font-size: 16px;
+      line-height: 22px;
+      color: $colorBlack;
+      opacity: .6 ; 
+      transition: $trans ; 
+
+      &.showText {
+        max-height: 100% ; 
+        transition: $trans ; 
+      }
+    }
+
+    &__showMore {
+      margin-left: 92px ;
+      
+      background: none;
+      font-size: 20px;
+      line-height: 25.1px;
+      color: $colorGray;
+    }
+
+    &__subscription {
+      min-width: 154px ;
+      height: 40px ;
+      background: $colorBackground;
+      font-size: 16px;
+      line-height: $lineHeight;
+      color: #fff ; 
+      border-radius: 20px ;
+      
+      transition: $trans ; 
+
+      &:hover {
+        background: none ;
+        color: $colorRed; 
+        border: 1px solid $colorRed ; 
+
+        transition: $trans ; 
+      }
+    }
+  }
+
+  &-listVideo {
+    width: 100% ;
+    max-width: 367px ;
+    margin-left: 40px;
+
+    &__title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &__nextVideoText {
+      font-weight: $fw-sev;
+      font-size: 36px;
+      line-height: 45.18px;
+      color: $colorBlack;
+    }
+
+    &__toggle {
+      position: relative ; 
+      width: 44px ;
+      height: 28px ;
+      background: #EBEBEB;
+      border-radius: 14px ;
+
+      input {
+        display: none ; 
+      }
+
+      label {
+        position: absolute;
+        font-weight: $fw-sev;
+        text-transform: uppercase;
+        font-size: 16px;
+        letter-spacing: 1px;
+        line-height: $lineHeight;
+
+        span {
+          position: absolute;
+          left: -110px ;
+          line-height: 28px;
+          user-select: none;
+        }
+
+        &::after {
+          content: '';
+          position: absolute ; 
+          top: 2px ;
+          left: 2px ;
+          display: block ; 
+          width: 24px ;
+          height: 24px ;
+          background: $colorGrayLight;
+          box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.237602);
+          border-radius: 100% ; 
+          transition: $trans ; 
+        }
+      }
+
+
+      input:checked + label::after {
+        left: 18px ;
+        transition: $trans ; 
+        background: #2196F3 ; 
+      }
+    }
+
+    &__box {
+      max-height: 100% ; 
+      overflow-X: hidden ; 
+    }
+
+    .main-boxVideos__block.video {
+      max-width: 350px;
+
+      &:not(:first-child) {
+        margin-top: 23px;
+      }
+
+      &:first-child {
+        margin-top: 25px;
+      }
+    }
+
+    .main-boxVideos__block_img.videoImg {
+      max-width: 100% ; 
+    }
+
+    .main-boxVideos__block.video:not(:first-child) {
+      margin-left: 0;
+    }
+
+    .main-boxVideos__block_img.videoImg span {
+      position: absolute;
+      width: 47px;
+      height: 24px;
+      background: rgba(0, 0, 0, 0.3);
+      border-radius: 12px;
+      bottom: 15px;
+      right: -3px;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .main-boxVideos__block_info_title.videoText {
+      font-size: 26px;
+      margin-top: 13px;
+      margin-bottom: 11px;
+    }
+  }
+}
+
+@media (max-width: 1920px) {
+  .mainVideo-video__video img {
+    width: 1300px ;
+  }
+}
+
+@media (max-width: 1862px) {
+  .mainVideo-video__video img {
+    width: 1066px ;
+  }
+}
+
+@media (max-width: 1640px) {
+  .mainVideo-video {
+    max-width: 955px ;
+  }
+  .mainVideo-video__video img {
+    width: 960px ;
+  }
+}
+
+@media (max-width: 1515px) {
+  .mainVideo-video {
+    max-width: 800px ;
+  }
+  .mainVideo-video__video img {
+    width: 810px ;
+  }
+}
+
+@media (max-width: 1370px) {
+  .mainVideo-video {
+    max-width: 600px ;
+  }
+  .mainVideo-video__video img {
+    width: 610px ;
+  }
+}
+
+@media (max-width: 1170px) {
+  .main-boxVideos__block_img.videoImg {
+    width: 250px ;
+  }
+
+  .main-boxVideos__block_img.videoImg img {
+    width: 250px ;
+  }
+
+  .main-boxVideos__block.video {
+    width: 250px ;
+  }
+
+  .mainVideo-listVideo .main-boxVideos__block_img.videoImg span {
+    right: 10px ;
+  }
+
+  .main-boxVideos__block_info_title.videoText {
+    font-size: 18px !important;
+  }
+
+  .mainVideo-listVideo {
+    max-width: 250px ;
+  }
+
+  .mainVideo-listVideo__toggle label span {
+    display: none;
+  }
+}
+
+@media(max-width: 975px) {
+  .mainVideo-inner {
+    display: flex ;
+    flex-direction: column ; 
+  }
+  .mainVideo-video {
+    width: 100% ;
+    max-width: 100% ; 
+  }
+  .mainVideo-video__video img {
+    width: 100% ; 
+  }
+  .mainVideo-listVideo {
+    margin: 0 auto ;
+    width: 100% ;
+    max-width: 450px ;
+  }
+  .mainVideo-listVideo__toggle label span {
+    display: block;
+  }
+  .main-boxVideos__block.video {
+    margin: 25px auto !important; 
+  }
+  .main-boxVideos__block.video {
+    width: 100% ;
+  }
+  .main-boxVideos__block_img.videoImg {
+    width: 100% ; 
+  }
+  .main-boxVideos__block_img.videoImg img {
+    width: 350px ;
+  }
+  .mainVideo-listVideo {
+    margin-top: 50px;
+  }
+}
+
+@media(max-width: 640px) {
+  .mainVideo-video__video {
+    width: 100%;
+    position: absolute;
+    left: 0;
+  }
+  .mainVideo-video__info {
+    margin-top: 350px;
+  }
+}
+
+@media(max-width: 630px) {
+  .mainVideo-video__description {
+    display: flex;
+    flex-direction: column;
+  }
+  .mainVideo-video__subscription {
+    width: 100px;
+    margin: 0 auto;
+  }
+  .mainVideo-video__block {
+    margin-bottom: 20px;
+  }
+  .mainVideo {
+    margin: 94px 70px 80px 63px; 
+  }
+  .mainVideo-video__views {
+    margin-bottom: 10px;
+  }
+  .mainVideo-video__opportunities {
+    display: flex;
+    flex-direction: column;
+  }
+  .mainVideo-video__more {
+    display: flex;
+    margin: 10px auto ;
+  }
+}
+
+@media(max-width: 521px) {
+  .mainVideo-video__info {
+    margin-top: 300px;
+  }
+}

@@ -1,0 +1,128 @@
+@media (max-width: 1155px ) {
+  .sidebar {
+    left: -100% ; 
+    transition: $trans ; 
+  }
+
+  .main {
+    margin: 114px 0 0 30px ; 
+  }
+
+  .mainChannel  {
+    margin: 404px 0 0 32px !important; 
+
+    &::before {
+      left: 0 !important ;
+      width: 100% !important ;
+    }
+  }
+}
+
+@media (max-width: 915px ) {
+  .main-top__title_type {
+    display: none ;
+  }
+}
+
+@media (max-width: 700px ) {
+  .main-top {
+    margin-right: 20px;
+  }
+}
+
+@media (max-width: 666px ) {
+  .header {
+    padding: 0px 32px 20px 32px ;  
+  }
+  .header-nav {
+    display: none ;
+  }
+
+  .header-user {
+    margin-left: 25px;
+  }
+
+  .header-menu {
+    display: none;
+  }
+}
+
+@media (max-width: 540px ) {
+  .main-top__right_button {
+    display: none;
+  }
+}
+
+@media(max-width: 600px) {
+  .mainChannel-inner {
+    margin-top: -255px !important;
+  }
+}
+
+@media (max-width: 521px ) {
+  .main {
+    display: none;
+  }
+
+  .mainChannel-inner {
+    margin-bottom: 70px !important;
+  }
+
+  .main-adaptive {
+    display: block !important;
+
+    &-inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &-block {
+      max-width: 288px ;
+      margin: 0 auto ; 
+
+      &:not(:first-child) {
+        margin-top: 30px;
+      }
+      
+    &__img {
+      position: relative ; 
+
+        span {
+        position: absolute; 
+        bottom: 10px ;
+        right: 10px ; 
+
+        background: rgba(0 , 0 , 0 , 0.3);
+        padding: 3px 9px ; 
+        border-radius: 12px ; 
+
+        color: #fff ; 
+        font-size: 14px;
+        line-height: 17.57px;
+        }
+      }
+
+      &__title {
+        font-weight: $fw-sev;
+        font-size: 16px;
+        line-height: 20.08px;
+        color: $colorBlack ; 
+
+        margin-top: 8px;
+        margin-bottom: 4px;
+      }  
+
+      &__info {
+        display: flex;
+        justify-content: space-between;
+
+        &_item {
+          font-size: 13px;
+          line-height: 16.32px;
+          color: $colorGray;
+        }
+      }
+    }
+  }
+}

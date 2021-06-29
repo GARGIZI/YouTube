@@ -1,0 +1,145 @@
+.header {
+  position: fixed;
+  top: 0 ; 
+  width: 100%; 
+  z-index: 10000 ; 
+  padding: 0 70px 20px 32px ; 
+
+  &::before {
+    content:'';
+    width: 100% ;
+    height: 100% ;
+    background: $colorSidebar;
+    position: absolute;
+    left: 0 ;
+    top: -100% ; 
+    z-index: -1 ; 
+    transition: $trans ;
+  }
+
+  &.active::before {
+    top: 0 ; 
+    transition: $trans ;
+  }
+
+  &.active .header-logo a svg .pathColorText {
+    fill: #fff ; 
+  }
+
+  &.active .header-nav__item svg path {
+    fill: #fff ;
+    transition: $trans ; 
+  }
+
+  &.active .header-menu svg path {
+    fill: #fff ;
+    transition: $trans ; 
+  }
+
+  &-inner {
+    display: flex;
+    align-items: center;
+    padding-top: 20px ;
+  }
+
+  &-menu {
+    cursor: pointer ; 
+
+    margin-right: 28px;
+  }
+
+  &-logo {
+    cursor: pointer ; 
+
+    margin-right: 59px;
+  }
+
+  &-search {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    width: 100% ;
+    flex-basis: 830px;
+
+    input {
+      width: 100% ;
+      flex-basis: 830px;
+      height: 44px ;
+
+      padding-left: 23px;
+
+      border: none ; 
+      border-radius: 22px;
+
+      color: $colorBlack ; 
+      background: #EBEBEB;
+      mix-blend-mode: normal;
+
+      &::placeholder {
+        font-size: 16px;
+        color: #30384C ; 
+        line-height: 20.08px;
+        opacity: 0.4;
+      }
+    }
+
+    cursor: pointer ;
+
+    img {
+      position: absolute ; 
+      right: 17.79px ;
+      top: auto ;
+
+    }
+  }
+
+  &-nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex: 1 ; 
+
+    &__item {
+      cursor: pointer;
+
+      &:not(:first-child) {
+        margin-left: 50px;
+      }
+
+      &:nth-child(3) {
+        position: relative ;
+
+        &::before {
+          content: '2';
+          width: 18px ;
+          height: 18px ;
+          background: $colorBackground;
+          border: 2px solid #FFFFFF;
+          border-radius: 100% ;
+
+          color: #fff ; 
+          font-size: 12px;
+          font-weight: $fw-sev;
+
+          position: absolute;
+          text-align: center;
+          line-height: 18px;
+          top: -6px ;
+          right: -6px ;
+        }
+      }
+    }
+  }
+
+  &-user {
+    cursor: pointer;
+
+    margin-left: 45px;
+    z-index: 1 ; 
+  }
+}
+
+.header.active .header-search_ada svg path {
+  fill: #fff ; 
+}

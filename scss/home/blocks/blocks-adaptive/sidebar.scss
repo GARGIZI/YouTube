@@ -1,0 +1,62 @@
+.sidebar-ada {
+  height: 61px ;
+  width: 100% ; 
+  background: #fff;
+
+  z-index: 10 ; 
+  position: fixed; 
+
+  bottom: -100% ;
+  transition: $trans;
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute ;
+    top: 0;
+    width: 100% ;
+    height: 1px ;
+    background: #f1f1f1;
+  }
+
+  &-box {
+    display: flex;
+    justify-content: space-between;
+
+    margin: 13px 24px 0 24px  ; 
+
+    &__block {
+      text-align: center;
+      cursor: pointer ; 
+
+      &:hover &_text {
+        color: #FF0000 ; 
+        transition: $trans ; 
+      }
+
+      &:hover &_img svg path {
+        fill: #FF0000; 
+        transition: $trans ; 
+      }
+
+      &_img svg {
+        height: 20px;
+      }
+
+      &_text {
+        color: $colorSidebar ;
+        font-size: 10px;
+        line-height: 12.55px;
+        margin-top: 4px;
+        transition: $trans ; 
+      }
+    }
+  }
+}
+
+@media (max-width: 520px ) {
+  .sidebar-ada {
+    bottom: 0 ; 
+    transition: $trans ;
+  }
+}

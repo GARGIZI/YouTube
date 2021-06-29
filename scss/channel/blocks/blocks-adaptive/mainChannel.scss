@@ -1,0 +1,127 @@
+@media(max-width: 1650px) {
+  .mainChannel-sidebar {
+    display: none ; 
+  }
+}
+
+@media(max-width: 1120px) {
+  .mainChannel-left__block {
+    display: flex;
+    flex-direction: column;
+    align-items: center ;
+    max-width: 540px ;
+  }
+
+  .mainChannel-left__img {
+    margin-right: 0;
+  }
+}
+
+@media(max-width: 846px) {
+  .mainChannel-left__menu {
+    margin-right: 30px;
+  }
+  .mainChannel-left__menu  ul {
+    justify-content: stretch;
+  }
+  li {
+    display: none ; 
+  }
+  li:nth-child(1) {
+    display: block ; 
+  }
+  li:nth-child(2) {
+    display: block ; 
+    margin-left: 30px;
+  }
+  li:nth-child(3) {
+    display: block ; 
+    margin-left: 30px;
+  }
+  li:last-child {
+    display: block;
+    margin-top: -13px; 
+    margin-left: 40px;
+    transition: $trans ;
+  }
+}
+
+.arrow-adaptive:hover svg path {
+  fill: #FF0000;
+  transition: $trans ;
+}
+
+@media(max-width: 660px) {
+  .mainChannel-top {
+    margin-right: 30px;
+  }
+}
+
+.header-logo a span {
+  display: none ;
+}
+
+.header-user svg {
+  display: none;
+}
+
+@media(max-width: 600px) {
+  .mainChannel {
+    margin-top: 152px;
+    margin-bottom: 100px;
+
+    &-top {
+      display: flex ;
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    &::before {
+      height: 100px;
+      z-index: -1 ; 
+    }
+  }
+  .mainChannel-userAccount {
+    display: flex ;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .mainChannel-userAccount__info {
+    margin-left: 0;
+  }
+  .mainChannel-oppo__notification {
+    display: none ; 
+  }
+  .mainChannel-oppo__subsrcibtion {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+  .header-logo_svg {
+    display: none ;
+  }
+  .header-logo a span {
+    display: flex !important;
+    align-items:center ;
+  
+    & svg:last-child {
+      margin-left: 10px;
+      margin-top: 3px;
+    }
+  }
+  .header-user_simple {
+    display: none ;
+  }
+  .header-user svg {
+    display: block;
+    margin-top: -4px;
+  }
+  .mainChannel-left__block {
+    align-items: stretch ;
+  }
+  .mainChannel-left__img {
+    width: 400px ;
+  }
+  .mainChannel-left__img img {
+    width: 400px ;
+  }
+}
